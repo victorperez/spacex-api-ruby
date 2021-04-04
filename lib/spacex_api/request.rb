@@ -22,7 +22,7 @@ module SpacexApi
         ) do |connection|
           connection.adapter Faraday.default_adapter
 
-          connection.response :logger
+          connection.response :logger if SpacexApi.configuration.logger
           connection.response :json, :content_type => /\bjson$/
 
           connection.use Faraday::Response::RaiseError
