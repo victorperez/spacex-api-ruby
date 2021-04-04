@@ -8,6 +8,10 @@ module SpacexApi
       def get_payload(id)
         get("payloads/#{id}")
       end
+
+      def query_payloads(body = nil)
+        post("payloads/query", body)
+      end
     end
   end
 end

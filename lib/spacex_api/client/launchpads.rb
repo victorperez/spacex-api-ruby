@@ -8,6 +8,10 @@ module SpacexApi
       def get_launchpad(id)
         get("launchpads/#{id}")
       end
+
+      def query_launchpads(body = nil)
+        post("launchpads/query", body)
+      end
     end
   end
 end

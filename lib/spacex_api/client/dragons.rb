@@ -8,6 +8,10 @@ module SpacexApi
       def get_dragon(id)
         get("dragons/#{id}")
       end
+
+      def query_dragons(body = nil)
+        post("dragons/query", body)
+      end
     end
   end
 end

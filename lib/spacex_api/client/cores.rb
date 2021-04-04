@@ -8,6 +8,10 @@ module SpacexApi
       def get_core(id)
         get("cores/#{id}")
       end
+
+      def query_cores(body = nil)
+        post("cores/query", body)
+      end
     end
   end
 end

@@ -24,6 +24,10 @@ module SpacexApi
       def get_launch(id)
         get("launches/#{id}")
       end
+
+      def query_launches(body = nil)
+        post("launches/query", body)
+      end
     end
   end
 end

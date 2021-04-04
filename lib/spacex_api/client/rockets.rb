@@ -8,6 +8,10 @@ module SpacexApi
       def get_rocket(id)
         get("rockets/#{id}")
       end
+
+      def query_rockets(body = nil)
+        post("rockets/query", body)
+      end
     end
   end
 end

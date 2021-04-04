@@ -8,6 +8,10 @@ module SpacexApi
       def get_historical_event(id)
         get("history/#{id}")
       end
+
+      def query_historical_events(body = nil)
+        post("history/query", body)
+      end
     end
   end
 end

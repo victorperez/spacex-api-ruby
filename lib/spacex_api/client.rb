@@ -34,14 +34,14 @@ module SpacexApi
       request(:get, path)
     end
 
-    def post(path)
-      request(:post, path)
+    def post(path, body = nil)
+      request(:post, path, body)
     end
 
     private
 
-    def request(method, path)
-      Request.call(method, path)
+    def request(method, path, body = nil)
+      Request.call(method, path, body)
     end
   end
 end
