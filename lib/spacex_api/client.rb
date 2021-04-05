@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spacex_api/client/capsules"
 require "spacex_api/client/company_info"
 require "spacex_api/client/cores"

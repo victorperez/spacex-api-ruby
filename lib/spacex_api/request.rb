@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SpacexApi
   class Request
     class << self
@@ -18,12 +20,12 @@ module SpacexApi
       def connection
         Faraday.new(
           url: "#{SpacexApi::BASE_URI}/#{SpacexApi.configuration.version}",
-          headers: { 'Content-Type' => 'application/json' }
+          headers: { "Content-Type" => "application/json" }
         ) do |connection|
           connection.adapter Faraday.default_adapter
 
           connection.response :logger if SpacexApi.configuration.logger
-          connection.response :json, :content_type => /\bjson$/
+          connection.response :json, content_type: /\bjson$/
 
           connection.use Faraday::Response::RaiseError
         end

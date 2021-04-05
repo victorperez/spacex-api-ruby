@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SpacexApi
   class Client
     module Dragons
