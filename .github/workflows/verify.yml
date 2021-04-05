@@ -1,0 +1,39 @@
+name: Verify
+on: [push]
+
+jobs:
+  linters:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 2.4
+
+      - name: Run linters
+        run: |
+          bundle exec rubocop
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: [2.4, 2.5, 2.6, 2.7, 3.0]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: ${{ matrix.ruby-version }}
+
+      - name: Run tests
+        run: |
+          bundle exec rake test
