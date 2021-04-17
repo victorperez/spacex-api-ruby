@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '899'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2a7aefe651462629e2553801bfbe1e291619060517; expires=Sat, 22-May-21
+        03:01:57 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=86400
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"666-nq7Oz9nB3OK4QtAu8srmaIk+ycI"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09992003ff0000f3f75a898000000001'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=GeXNl1R%2FqfLROt7UAyblFU6IEWA6yxZ9psTtXJZV4q1XOuum9ueV6cu%2BDHUNojOqB5U6byTGKCHcMrEiFFpDImtF%2Fp%2BmHSgZR8QquMKeER1v3t0%3D"}]}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c4cc8e7f3f7-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"heat_shield":{"material":"PICA-X","size_meters":3.6,"temp_degrees":3000,"dev_partner":"NASA"},"launch_payload_mass":{"kg":6000,"lb":13228},"launch_payload_vol":{"cubic_meters":25,"cubic_feet":883},"return_payload_mass":{"kg":3000,"lb":6614},"return_payload_vol":{"cubic_meters":11,"cubic_feet":388},"pressurized_capsule":{"payload_volume":{"cubic_meters":11,"cubic_feet":388}},"trunk":{"trunk_volume":{"cubic_meters":14,"cubic_feet":494},"cargo":{"solar_array":2,"unpressurized_cargo":true}},"height_w_trunk":{"meters":7.2,"feet":23.6},"diameter":{"meters":3.7,"feet":12},"first_flight":"2010-12-08","flickr_images":["https://i.imgur.com/9fWdwNv.jpg","https://live.staticflickr.com/8578/16655995541_7817565ea9_k.jpg","https://farm3.staticflickr.com/2815/32761844973_4b55b27d3c_b.jpg","https://farm9.staticflickr.com/8618/16649075267_d18cbb4342_b.jpg"],"name":"Dragon
+        1","type":"capsule","active":true,"crew_capacity":0,"sidewall_angle_deg":15,"orbit_duration_yr":2,"dry_mass_kg":4200,"dry_mass_lb":9300,"thrusters":[{"type":"Draco","amount":18,"pods":4,"fuel_1":"nitrogen
+        tetroxide","fuel_2":"monomethylhydrazine","isp":300,"thrust":{"kN":0.4,"lbf":90}}],"wikipedia":"https://en.wikipedia.org/wiki/SpaceX_Dragon","description":"Dragon
+        is a reusable spacecraft developed by SpaceX, an American private space transportation
+        company based in Hawthorne, California. Dragon is launched into space by the
+        SpaceX Falcon 9 two-stage-to-orbit launch vehicle. The Dragon spacecraft was
+        originally designed for human travel, but so far has only been used to deliver
+        cargo to the International Space Station (ISS).","id":"5e9d058759b1ff74a7ad5f8f"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:58 GMT
+recorded_with: VCR 6.0.0

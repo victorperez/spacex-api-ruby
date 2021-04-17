@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/history/5f6fb2cfdcfdf403df37971e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da2893d3924e845ce96836cadf866eaa31619060514; expires=Sat, 22-May-21
+        03:01:54 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - W/"144-IUHZVZbL23NYQnXjNI9DfCrC/es"
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 4ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991ff89100002d1f7d9f1000000001'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=mXtl9N6xf8ClzfbBT4lrHbVuq2vW5%2F%2FXvCzmv7%2B4VtOhqdgO7dRJHq7uDsVVNnuD4ToET9UPuS2y%2Bm2XtiIgkpdAANk639uhephfuW4vm4PLmrM%3D"}],"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c3a8a492d1f-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"links":{"article":"http://www.spacex.com/news/2013/02/11/flight-4-launch-update-0"},"title":"Falcon
+        reaches Earth orbit","event_date_utc":"2008-09-28T23:15:00Z","event_date_unix":1222643700,"details":"Falcon
+        1 becomes the first privately developed liquid-fuel rocket to reach Earth
+        orbit.","id":"5f6fb2cfdcfdf403df37971e"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:55 GMT
+recorded_with: VCR 6.0.0

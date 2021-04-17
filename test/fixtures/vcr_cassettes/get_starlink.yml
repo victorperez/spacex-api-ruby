@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/starlink/5eed770f096e59000698560d
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '767'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da836dc44a092c54eb34bba54116702ba1619060494; expires=Sat, 22-May-21
+        03:01:34 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=3600
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"4f6-GZorrWwhufXoPs0RBXlZ/8sHPGo"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 5ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991faa5c0000424b1e9ec000000001'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Bnw%2FrlmVDqGfcJdMvmbGlwE6MC%2FbgLzWdEHnRH32MNr1VJVU%2B8NBB9XvqmqW8vewzm62UVMt%2Bjl%2BJVOFkudQYbQ3xcOZeGokJ18qUmRNHK%2F2%2BFs%3D"}],"max_age":604800}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9bbd5fde424b-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"spaceTrack":{"CCSDS_OMM_VERS":"2.0","COMMENT":"GENERATED VIA SPACE-TRACK.ORG
+        API","CREATION_DATE":"2020-10-13T04:16:08","ORIGINATOR":"18 SPCS","OBJECT_NAME":"STARLINK-30","OBJECT_ID":"2019-029K","CENTER_NAME":"EARTH","REF_FRAME":"TEME","TIME_SYSTEM":"UTC","MEAN_ELEMENT_THEORY":"SGP4","EPOCH":"2020-10-13T02:56:59.566560","MEAN_MOTION":16.43170483,"ECCENTRICITY":0.0003711,"INCLINATION":52.9708,"RA_OF_ASC_NODE":332.0356,"ARG_OF_PERICENTER":120.7278,"MEAN_ANOMALY":242.0157,"EPHEMERIS_TYPE":0,"CLASSIFICATION_TYPE":"U","NORAD_CAT_ID":44244,"ELEMENT_SET_NO":999,"REV_AT_EPOCH":7775,"BSTAR":0.0022139,"MEAN_MOTION_DOT":0.47180237,"MEAN_MOTION_DDOT":0.000012426,"SEMIMAJOR_AXIS":6535.519,"PERIOD":87.635,"APOAPSIS":159.809,"PERIAPSIS":154.958,"OBJECT_TYPE":"PAYLOAD","RCS_SIZE":"LARGE","COUNTRY_CODE":"US","LAUNCH_DATE":"2019-05-24","SITE":"AFETR","DECAY_DATE":"2020-10-13","DECAYED":1,"FILE":2850561,"GP_ID":163365918,"TLE_LINE0":"0
+        STARLINK-30","TLE_LINE1":"1 44244U 19029K   20287.12291165  .47180237  12426-4  22139-2
+        0  9995","TLE_LINE2":"2 44244  52.9708 332.0356 0003711 120.7278 242.0157
+        16.43170483 77756"},"version":"v0.9","launch":"5eb87d30ffd86e000604b378","longitude":null,"latitude":null,"height_km":null,"velocity_kms":null,"id":"5eed770f096e59000698560d"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:36 GMT
+recorded_with: VCR 6.0.0

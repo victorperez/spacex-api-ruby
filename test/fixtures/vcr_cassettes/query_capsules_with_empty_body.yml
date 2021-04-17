@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.spacexdata.com/v4/capsules/query
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:02:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '708'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3a82b976486327281eddfd847688ddd61619060548; expires=Sat, 22-May-21
+        03:02:28 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"a96-JxKdSkz5PGhjIIvYrMX90xQerP4"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 5ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '0999207a08000053eb0931d000000001'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=2aIOSRF8zGl%2BgG8LpqWxmH8gRKwio1J9%2FsCyZWSNmDtx02nhwQcRmeFilXEPwMJ5TaUU%2FOwQ8xpKwlpnIPIo7RHNCNBGCZnV1fRkWLQCemp3YIc%3D"}],"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9d09adcf53eb-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"docs":[{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Hanging
+        in atrium at SpaceX HQ in Hawthorne ","launches":["5eb87cdeffd86e000604b330"],"serial":"C101","status":"retired","type":"Dragon
+        1.0","id":"5e9e2c5bf35918ed873b2664"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"On
+        display at KSC Visitor''s Center ","launches":["5eb87cdfffd86e000604b331"],"serial":"C102","status":"retired","type":"Dragon
+        1.0","id":"5e9e2c5bf3591882af3b2665"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Location
+        and status unknown","launches":["5eb87ce0ffd86e000604b332"],"serial":"C103","status":"unknown","type":"Dragon
+        1.0","id":"5e9e2c5bf3591835983b2666"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Location
+        and status unknown","launches":["5eb87ce1ffd86e000604b333"],"serial":"C104","status":"unknown","type":"Dragon
+        1.0","id":"5e9e2c5bf359189ef23b2667"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Location
+        and status unknown","launches":["5eb87ce4ffd86e000604b337"],"serial":"C105","status":"unknown","type":"Dragon
+        1.1","id":"5e9e2c5bf3591859a63b2668"},{"reuse_count":2,"water_landings":3,"land_landings":0,"last_update":"As
+        of January 8, 2020: Arrived at Port of LA after splashdown following CRS-19
+        mission","launches":["5eb87ce7ffd86e000604b33b","5eb87d03ffd86e000604b352","5eb87d39ffd86e000604b37e"],"serial":"C106","status":"active","type":"Dragon
+        1.1","id":"5e9e2c5bf3591880643b2669"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Location
+        and status unknown","launches":["5eb87ce8ffd86e000604b33c"],"serial":"C107","status":"unknown","type":"Dragon
+        1.1","id":"5e9e2c5bf35918165f3b266a"},{"reuse_count":2,"water_landings":3,"land_landings":0,"last_update":"As
+        of August 29, 2019: Arrived at Port of LA after splashdown following CRS-18
+        mission","launches":["5eb87cecffd86e000604b33f","5eb87d0effd86e000604b35c","5eb87d36ffd86e000604b37b"],"serial":"C108","status":"active","type":"Dragon
+        1.1","id":"5e9e2c5cf359188bfb3b266b"},{"reuse_count":0,"water_landings":1,"land_landings":0,"last_update":"Destroyed
+        on impact after F9 launch failure","launches":["5eb87ceeffd86e000604b341"],"serial":"C109","status":"destroyed","type":"Dragon
+        1.1","id":"5e9e2c5cf35918407d3b266c"},{"reuse_count":1,"water_landings":2,"land_landings":0,"last_update":"Location
+        and status unknown","launches":["5eb87cf3ffd86e000604b345","5eb87d16ffd86e000604b364"],"serial":"C110","status":"active","type":"Dragon
+        1.1","id":"5e9e2c5cf3591885d43b266d"}],"totalDocs":21,"offset":0,"limit":10,"totalPages":3,"page":1,"pagingCounter":1,"hasPrevPage":false,"hasNextPage":true,"prevPage":null,"nextPage":2}'
+  recorded_at: Thu, 22 Apr 2021 03:02:28 GMT
+recorded_with: VCR 6.0.0

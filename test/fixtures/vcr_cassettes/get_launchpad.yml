@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/launchpads/5e9e4501f5090910d4566f83
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '409'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d953556a772f9f682d99b9a733bd10fdd1619060502; expires=Sat, 22-May-21
+        03:01:42 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"25c-6s0Gx0DYP0aveoFbexQx+FvmOlg"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 3ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991fc74e0000425df1991000000001'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=H2vfL63ycuwddWuj%2BJiDW8tIknRAmv8YwH5boj4o9qskuPiTpcvdfKMvv9gembF%2BFgmJzc9913UmdJTyhLlC0Ig%2B1V6QPJHXZaB3Xf2GXMBOAjI%3D"}],"max_age":604800}'
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9bebad37425d-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"VAFB SLC 3W","full_name":"Vandenberg Air Force Base Space
+        Launch Complex 3W","locality":"Vandenberg Air Force Base","region":"California","timezone":"America/Los_Angeles","latitude":34.6440904,"longitude":-120.5931438,"launch_attempts":0,"launch_successes":0,"rockets":["5e9d0d95eda69955f709d1eb"],"launches":[],"details":"SpaceX''s
+        original west coast launch pad for Falcon 1. It was used in a static fire
+        test but was never employed for a launch, and was abandoned due to range scheduling
+        conflicts arising from overflying other active pads.","status":"retired","id":"5e9e4501f5090910d4566f83"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:42 GMT
+recorded_with: VCR 6.0.0

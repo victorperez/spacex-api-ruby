@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.spacexdata.com/v4/cores/query
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '808'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d00ecd5fccc4be3311d12dbe484ecd9d51619060509; expires=Sat, 22-May-21
+        03:01:49 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"b84-qINAUEMWzWM9eZcPYAfw9dJhDLY"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 4ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991fe19d00004052d396b000000001'
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=1bLm3kFTArvfhGUrf%2Bcpn3FC9dxx0Fxllh0DwE4x8iNcvssRf5UNn0%2B%2FRaveV%2FH4VciQ0vE7ndaa4UC7fcpjZlpw0BDlgBovQp3WdybLA5OvpNE%3D"}]}'
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c15cf3b4052-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkb2NzIjpbeyJibG9jayI6bnVsbCwicmV1c2VfY291bnQiOjAsInJ0bHNfYXR0ZW1wdHMiOjAsInJ0bHNfbGFuZGluZ3MiOjAsImFzZHNfYXR0ZW1wdHMiOjAsImFzZHNfbGFuZGluZ3MiOjAsImxhc3RfdXBkYXRlIjoiRW5naW5lIGZhaWx1cmUgYXQgVCszMyBzZWNvbmRzIHJlc3VsdGVkIGluIGxvc3Mgb2YgdmVoaWNsZSIsImxhdW5jaGVzIjpbIjVlYjg3Y2Q5ZmZkODZlMDAwNjA0YjMyYSJdLCJzZXJpYWwiOiJNZXJsaW4xQSIsInN0YXR1cyI6Imxvc3QiLCJpZCI6IjVlOWUyODlkZjM1OTE4MDMzZDNiMjYyMyJ9LHsiYmxvY2siOm51bGwsInJldXNlX2NvdW50IjowLCJydGxzX2F0dGVtcHRzIjowLCJydGxzX2xhbmRpbmdzIjowLCJhc2RzX2F0dGVtcHRzIjowLCJhc2RzX2xhbmRpbmdzIjowLCJsYXN0X3VwZGF0ZSI6IlN1Y2Nlc3NmdWwgZmlyc3Qtc3RhZ2UgYnVybiBhbmQgdHJhbnNpdGlvbiB0byBzZWNvbmQgc3RhZ2UsIG1heGltYWwgYWx0aXR1ZGUgMjg5IGttLiBIYXJtb25pYyBvc2NpbGxhdGlvbiBhdCBUKzUgbWludXRlcyBQcmVtYXR1cmUgZW5naW5lIHNodXRkb3duIGF0IFQrNyBtaW4gMzAgcy4gRmFpbGVkIHRvIHJlYWNoIG9yYml0LiIsImxhdW5jaGVzIjpbIjVlYjg3Y2RhZmZkODZlMDAwNjA0YjMyYiJdLCJzZXJpYWwiOiJNZXJsaW4yQSIsInN0YXR1cyI6Imxvc3QiLCJpZCI6IjVlOWUyODllZjM1OTE4NDE2YTNiMjYyNCJ9LHsiYmxvY2siOm51bGwsInJldXNlX2NvdW50IjowLCJydGxzX2F0dGVtcHRzIjowLCJydGxzX2xhbmRpbmdzIjowLCJhc2RzX2F0dGVtcHRzIjowLCJhc2RzX2xhbmRpbmdzIjowLCJsYXN0X3VwZGF0ZSI6IlJlc2lkdWFsIHN0YWdlLTEgdGhydXN0IGxlZCB0byBjb2xsaXNpb24gYmV0d2VlbiBzdGFnZSAxIGFuZCBzdGFnZSAyLiIsImxhdW5jaGVzIjpbIjVlYjg3Y2RiZmZkODZlMDAwNjA0YjMyYyJdLCJzZXJpYWwiOiJNZXJsaW4xQyIsInN0YXR1cyI6Imxvc3QiLCJpZCI6IjVlOWUyODllZjM1OTE4MTQ4NzNiMjYyNSJ9LHsiYmxvY2siOm51bGwsInJldXNlX2NvdW50IjowLCJydGxzX2F0dGVtcHRzIjowLCJydGxzX2xhbmRpbmdzIjowLCJhc2RzX2F0dGVtcHRzIjowLCJhc2RzX2xhbmRpbmdzIjowLCJsYXN0X3VwZGF0ZSI6IkluaXRpYWxseSBzY2hlZHVsZWQgZm9yIDIz4oCTMjUgU2VwLCBjYXJyaWVkIGR1bW15IHBheWxvYWQg4oCTIG1hc3Mgc2ltdWxhdG9yLCAxNjUga2cgKG9yaWdpbmFsbHkgaW50ZW5kZWQgdG8gYmUgUmF6YWtTQVQuIiwibGF1bmNoZXMiOlsiNWViODdjZGJmZmQ4NmUwMDA2MDRiMzJkIl0sInNlcmlhbCI6Ik1lcmxpbjJDIiwic3RhdHVzIjoibG9zdCIsImlkIjoiNWU5ZTI4OWVmMzU5MTg1NWRjM2IyNjI2In0seyJibG9jayI6bnVsbCwicmV1c2VfY291bnQiOjAsInJ0bHNfYXR0ZW1wdHMiOjAsInJ0bHNfbGFuZGluZ3MiOjAsImFzZHNfYXR0ZW1wdHMiOjAsImFzZHNfbGFuZGluZ3MiOjAsImxhc3RfdXBkYXRlIjpudWxsLCJsYXVuY2hlcyI6WyI1ZWI4N2NkY2ZmZDg2ZTAwMDYwNGIzMmUiXSwic2VyaWFsIjoiTWVybGluM0MiLCJzdGF0dXMiOiJsb3N0IiwiaWQiOiI1ZTllMjg5ZWYzNTkxODRmMTAzYjI2MjcifSx7ImJsb2NrIjoxLCJyZXVzZV9jb3VudCI6MCwicnRsc19hdHRlbXB0cyI6MCwicnRsc19sYW5kaW5ncyI6MCwiYXNkc19hdHRlbXB0cyI6MCwiYXNkc19sYW5kaW5ncyI6MCwibGFzdF91cGRhdGUiOiJTdGFnZSBFeHBlbmRlZCIsImxhdW5jaGVzIjpbIjVlYjg3Y2RkZmZkODZlMDAwNjA0YjMyZiJdLCJzZXJpYWwiOiJCMDAwMyIsInN0YXR1cyI6ImV4cGVuZGVkIiwiaWQiOiI1ZTllMjg5ZWYzNTkxODVmMmIzYjI2MjgifSx7ImJsb2NrIjoxLCJyZXVzZV9jb3VudCI6MCwicnRsc19hdHRlbXB0cyI6MCwicnRsc19sYW5kaW5ncyI6MCwiYXNkc19hdHRlbXB0cyI6MCwiYXNkc19sYW5kaW5ncyI6MCwibGFzdF91cGRhdGUiOiJGaXJzdCBmbGlnaHQgb2YgRHJhZ29uIiwibGF1bmNoZXMiOlsiNWViODdjZGVmZmQ4NmUwMDA2MDRiMzMwIl0sInNlcmlhbCI6IkIwMDA0Iiwic3RhdHVzIjoibG9zdCIsImlkIjoiNWU5ZTI4OWVmMzU5MTgxODdjM2IyNjI5In0seyJibG9jayI6MSwicmV1c2VfY291bnQiOjAsInJ0bHNfYXR0ZW1wdHMiOjAsInJ0bHNfbGFuZGluZ3MiOjAsImFzZHNfYXR0ZW1wdHMiOjAsImFzZHNfbGFuZGluZ3MiOjAsImxhc3RfdXBkYXRlIjpudWxsLCJsYXVuY2hlcyI6WyI1ZWI4N2NkZmZmZDg2ZTAwMDYwNGIzMzEiXSwic2VyaWFsIjoiQjAwMDUiLCJzdGF0dXMiOiJsb3N0IiwiaWQiOiI1ZTllMjg5ZWYzNTkxOGYzOWMzYjI2MmEifSx7ImJsb2NrIjoxLCJyZXVzZV9jb3VudCI6MCwicnRsc19hdHRlbXB0cyI6MCwicnRsc19sYW5kaW5ncyI6MCwiYXNkc19hdHRlbXB0cyI6MCwiYXNkc19sYW5kaW5ncyI6MCwibGFzdF91cGRhdGUiOiJTdWZmZXJlZCBlbmdpbmUgb3V0IGF0IFQrMToxOSBidXQgcHJpbWFyeSBtaXNzaW9uIHN1Y2Nlc3NmdWwiLCJsYXVuY2hlcyI6WyI1ZWI4N2NlMGZmZDg2ZTAwMDYwNGIzMzIiXSwic2VyaWFsIjoiQjAwMDYiLCJzdGF0dXMiOiJsb3N0IiwiaWQiOiI1ZTllMjg5ZmYzNTkxODIxYTczYjI2MmIifSx7ImJsb2NrIjoxLCJyZXVzZV9jb3VudCI6MCwicnRsc19hdHRlbXB0cyI6MCwicnRsc19sYW5kaW5ncyI6MCwiYXNkc19hdHRlbXB0cyI6MCwiYXNkc19sYW5kaW5ncyI6MCwibGFzdF91cGRhdGUiOm51bGwsImxhdW5jaGVzIjpbIjVlYjg3Y2UxZmZkODZlMDAwNjA0YjMzMyJdLCJzZXJpYWwiOiJCMDAwNyIsInN0YXR1cyI6Imxvc3QiLCJpZCI6IjVlOWUyODlmZjM1OTE4ODRlMDNiMjYyYyJ9XSwidG90YWxEb2NzIjo3Miwib2Zmc2V0IjowLCJsaW1pdCI6MTAsInRvdGFsUGFnZXMiOjgsInBhZ2UiOjEsInBhZ2luZ0NvdW50ZXIiOjEsImhhc1ByZXZQYWdlIjpmYWxzZSwiaGFzTmV4dFBhZ2UiOnRydWUsInByZXZQYWdlIjpudWxsLCJuZXh0UGFnZSI6Mn0=
+  recorded_at: Thu, 22 Apr 2021 03:01:49 GMT
+recorded_with: VCR 6.0.0

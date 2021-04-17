@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/company
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '443'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1ad945a9adc1a67ea3c720e8e9ce7e991619060505; expires=Sat, 22-May-21
+        03:01:45 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=86400
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"2ea-KLET10RDtc2RJI9HB4muV6SDyUU"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991fd3570000072e2c9f2000000001'
+      Report-To:
+      - '{"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=PLgbTTaUKbYTyh0suhI%2B4xTsF7GALM21dHMcdNkrOkH%2BhJAnC4HdBKx0IHr87%2Bi7AXN%2Be9JL%2FixrX96gZKe5dgJowiMw3ATiq%2FB6i9gsjyyknX8%3D"}],"max_age":604800}'
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9bfef94e072e-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"headquarters":{"address":"Rocket Road","city":"Hawthorne","state":"California"},"links":{"website":"https://www.spacex.com/","flickr":"https://www.flickr.com/photos/spacex/","twitter":"https://twitter.com/SpaceX","elon_twitter":"https://twitter.com/elonmusk"},"name":"SpaceX","founder":"Elon
+        Musk","founded":2002,"employees":9500,"vehicles":4,"launch_sites":3,"test_sites":3,"ceo":"Elon
+        Musk","cto":"Elon Musk","coo":"Gwynne Shotwell","cto_propulsion":"Tom Mueller","valuation":74000000000,"summary":"SpaceX
+        designs, manufactures and launches advanced rockets and spacecraft. The company
+        was founded in 2002 to revolutionize space technology, with the ultimate goal
+        of enabling people to live on other planets.","id":"5eb75edc42fea42237d7f3ed"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:46 GMT
+recorded_with: VCR 6.0.0

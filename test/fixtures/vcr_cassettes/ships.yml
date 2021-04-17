@@ -1,0 +1,163 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/ships
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:02:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0de4aab8aa1e408ce5af9f81eb2707f91619060534; expires=Sat, 22-May-21
+        03:02:14 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"52b6-St/FaMsfiqAEfTbq/KeZ9LvAaf0"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 0ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09992046640000540f0438d000000001'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=MNXiKWWXzIEbHzycnMhtNbTu2O3Me9AUHVrqbYLHvO4o8QDypLdjr%2BFTYSmYizHGY9DltDHOff4piDO%2FIdaiPZBankyzvFiFrlJqCjkxSxzOKvE%3D"}],"max_age":604800,"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9cb70d80540f-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"legacy_id":"AMERICANCHAMPION","model":null,"type":"Tug","roles":["Support
+        Ship","Barge Tug"],"imo":7434016,"mmsi":367020820,"abs":571252,"class":7604342,"mass_kg":266712,"mass_lbs":588000,"year_built":1976,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION","image":"https://i.imgur.com/woCxpkj.jpg","launches":["5eb87cdeffd86e000604b330","5eb87cdfffd86e000604b331"],"name":"American
+        Champion","active":false,"id":"5ea6ed2d080df4000697c901"},{"legacy_id":"AMERICANISLANDER","model":null,"type":"Cargo","roles":["Dragon
+        Recovery"],"imo":null,"mmsi":367035570,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":null,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:435112/mmsi:367035570/imo:0/vessel:AMERICAN_ISLANDER","image":"https://i.imgur.com/jmj8Sh2.jpg","launches":["5eb87ce0ffd86e000604b332","5eb87ce1ffd86e000604b333","5eb87ce4ffd86e000604b337","5eb87ce7ffd86e000604b33b"],"name":"American
+        Islander","active":false,"id":"5ea6ed2d080df4000697c902"},{"legacy_id":"AMERICANSPIRIT","model":null,"type":"Cargo","roles":["Support
+        Ship"],"imo":null,"mmsi":null,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":null,"home_port":"Port
+        of Los Angeles","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":null,"image":null,"launches":["5eb87ce1ffd86e000604b334"],"name":"American
+        Spirit","active":false,"id":"5ea6ed2d080df4000697c903"},{"legacy_id":"ASOG","model":null,"type":"Barge","roles":["ASDS
+        barge"],"imo":null,"mmsi":null,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":null,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":null,"image":null,"launches":[],"name":"A
+        Shortfall of Gravitas","active":false,"id":"5ea6ed2d080df4000697c904"},{"legacy_id":"BETTYRGAMBARELLA","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":7517478,"mmsi":368000890,"abs":562590,"class":7427463,"mass_kg":202302,"mass_lbs":446000,"year_built":1974,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:1190856/mmsi:368000890/imo:7517478/vessel:BETTY_R_GAMBARELLA","image":"https://i.imgur.com/ngYgFnn.jpg","launches":["5eb87d08ffd86e000604b357","5eb87d0affd86e000604b359"],"name":"Betty
+        R Gambarella","active":false,"id":"5ea6ed2e080df4000697c905"},{"legacy_id":"ELSBETH3","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":8983375,"mmsi":367017460,"abs":null,"class":null,"mass_kg":273063,"mass_lbs":602000,"year_built":1999,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434560/mmsi:367017460/imo:8983375/vessel:ELSBETH_III","image":"https://i.imgur.com/1s5DUbJ.jpg","launches":["5eb87ce8ffd86e000604b33c","5eb87ceaffd86e000604b33d","5eb87cecffd86e000604b33f","5eb87ceeffd86e000604b341","5eb87cf2ffd86e000604b344","5eb87cf3ffd86e000604b345","5eb87cf5ffd86e000604b346","5eb87cf6ffd86e000604b347","5eb87cf8ffd86e000604b348","5eb87cf9ffd86e000604b349","5eb87cfaffd86e000604b34a","5eb87d00ffd86e000604b34f","5eb87d04ffd86e000604b353","5eb87d09ffd86e000604b358"],"name":"Elsbeth
+        III","active":false,"id":"5ea6ed2e080df4000697c906"},{"legacy_id":"GOMSCHIEF","model":null,"type":"High
+        Speed Craft","roles":["Fairing Recovery"],"imo":9744453,"mmsi":338035000,"abs":1247527,"class":14245747,"mass_kg":449964,"mass_lbs":992000,"year_built":2014,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:5126789/mmsi:338035000/imo:9744453/vessel:GO_MS_CHIEF","image":"https://imgur.com/NHsx95l.jpg","launches":["5eb87d3bffd86e000604b37f","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d44ffd86e000604b386","5eb87d45ffd86e000604b387","5eb87d46ffd86e000604b389","5eb87d50ffd86e000604b394","5ed9819a1f30554030d45c29","5ed981d91f30554030d45c2a","5eb87d47ffd86e000604b38a","5ef6a2090059c33cee4a828b","5ef6a2bf0059c33cee4a828c","5ef6a2e70059c33cee4a8293","5eb87d4cffd86e000604b38d","5fb95b3f3a88ae63c954603c","5eb87d4fffd86e000604b393","5fbfecce54ceb10a5664c80a","5fd386aa7faea57d297c86c1","5ff6554f9257f579ee3a6c5f"],"name":"GO
+        Ms Chief","active":false,"id":"5ea6ed2e080df4000697c907"},{"legacy_id":"GOMSTREE","model":null,"type":"High
+        Speed Craft","roles":["Fairing Recovery"],"imo":9744465,"mmsi":368059550,"abs":1249191,"class":15252765,"mass_kg":449964,"mass_lbs":992000,"year_built":2015,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:3439091/mmsi:368099550/imo:9744465/vessel:GO_MS_TREE","image":"https://i.imgur.com/MtEgYbY.jpg","launches":["5eb87d0dffd86e000604b35b","5eb87d0fffd86e000604b35d","5eb87d14ffd86e000604b361","5eb87d16ffd86e000604b363","5eb87d1affd86e000604b367","5eb87d1fffd86e000604b36b","5eb87d25ffd86e000604b370","5eb87d35ffd86e000604b37a","5eb87d37ffd86e000604b37c","5eb87d39ffd86e000604b37d","5eb87d3bffd86e000604b37f","5eb87d3cffd86e000604b380","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d44ffd86e000604b386","5eb87d45ffd86e000604b387","5eb87d46ffd86e000604b389","5eb87d50ffd86e000604b394","5ed9819a1f30554030d45c29","5ed981d91f30554030d45c2a","5ef6a1e90059c33cee4a828a","5ef6a2090059c33cee4a828b","5ef6a2bf0059c33cee4a828c","5ef6a2e70059c33cee4a8293","5f8399fb818d8b59f5740d43","5eb87d4fffd86e000604b393","5fbfecce54ceb10a5664c80a","5fd386aa7faea57d297c86c1","5ff6554f9257f579ee3a6c5f"],"name":"GO
+        Ms Tree","active":false,"id":"5ea6ed2e080df4000697c908"},{"legacy_id":"GONAVIGATOR","model":null,"type":"Cargo","roles":["Support
+        Ship","Fairing Recovery"],"imo":9566887,"mmsi":367550000,"abs":1221524,"class":9204358,"mass_kg":451778,"mass_lbs":996000,"year_built":2009,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:452540/mmsi:367550000/imo:9566887/vessel:GO_NAVIGATOR","image":"https://i.imgur.com/MjNWzhO.jpg","launches":["5eb87d2dffd86e000604b376","5eb87d30ffd86e000604b378","5eb87d35ffd86e000604b37a","5eb87d37ffd86e000604b37c","5eb87d39ffd86e000604b37d","5eb87d3cffd86e000604b380","5eb87d46ffd86e000604b388","5eb87d4dffd86e000604b38e","600f9a718f798e2a4d5f979d","600f9a8d8f798e2a4d5f979e"],"name":"GO
+        Navigator","active":true,"id":"5ea6ed2e080df4000697c909"},{"legacy_id":"GOPURSUIT","model":null,"type":"Cargo","roles":["Support
+        Ship","Fairing Recovery"],"imo":9458884,"mmsi":367191410,"abs":1201189,"class":7174230,"mass_kg":502999,"mass_lbs":1108925,"year_built":2007,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:439594/mmsi:367191410/imo:9458884/vessel:GO_PURSUIT","image":"https://i.imgur.com/5w1ZWre.jpg","launches":["5eb87d18ffd86e000604b365","5eb87d19ffd86e000604b366","5eb87d1bffd86e000604b368","5eb87d1effd86e000604b36a"],"name":"GO
+        Pursuit","active":false,"id":"5ea6ed2e080df4000697c90a"},{"legacy_id":"GOQUEST","model":null,"type":"Cargo","roles":["Support
+        Ship"],"imo":1155515,"mmsi":367564890,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":2014,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:450521/mmsi:367564890/imo:1155515/vessel:GO_QUEST","image":"https://i.imgur.com/ABXtHKa.jpg","launches":["5eb87ce8ffd86e000604b33c","5eb87ceaffd86e000604b33d","5eb87cecffd86e000604b33f","5eb87ceeffd86e000604b341","5eb87cf2ffd86e000604b344","5eb87cf3ffd86e000604b345","5eb87cf5ffd86e000604b346","5eb87cf6ffd86e000604b347","5eb87cf8ffd86e000604b348","5eb87cf9ffd86e000604b349","5eb87cfaffd86e000604b34a","5eb87d00ffd86e000604b34f","5eb87d04ffd86e000604b353","5eb87d09ffd86e000604b358","5eb87d0cffd86e000604b35a","5eb87d11ffd86e000604b35f","5eb87d18ffd86e000604b365","5eb87d19ffd86e000604b366","5eb87d1effd86e000604b36a","5eb87d22ffd86e000604b36d","5eb87d26ffd86e000604b371","5eb87d2dffd86e000604b376","5eb87d2effd86e000604b377","5eb87d30ffd86e000604b378","5eb87d35ffd86e000604b37a","5eb87d3cffd86e000604b380","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d46ffd86e000604b388","5eb87d46ffd86e000604b389","5eb87d50ffd86e000604b394","5ed981d91f30554030d45c2a","5ef6a1e90059c33cee4a828a","5ef6a2090059c33cee4a828b","5ef6a2bf0059c33cee4a828c","5ef6a2e70059c33cee4a8293","5eb87d4dffd86e000604b38e","5fb95b3f3a88ae63c954603c","5eb87d4effd86e000604b391","5fbfecce54ceb10a5664c80a","5ff6554f9257f579ee3a6c5f","60428aafc041c16716f73cd7","60428ac4c041c16716f73cd8"],"name":"GO
+        Quest","active":true,"id":"5ea6ed2f080df4000697c90b"},{"legacy_id":"GOSEARCHER","model":null,"type":"Cargo","roles":["Support
+        Ship","Fairing Recovery"],"imo":9591648,"mmsi":366584000,"abs":1226876,"class":10204360,"mass_kg":450870,"mass_lbs":994000,"year_built":2010,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:426008/mmsi:366584000/imo:9591648/vessel:GO_SEARCHER","image":"https://i.imgur.com/X4YQJZf.jpg","launches":["5eb87ce8ffd86e000604b33c","5eb87ceaffd86e000604b33d","5eb87cecffd86e000604b33f","5eb87ceeffd86e000604b341","5eb87cf2ffd86e000604b344","5eb87cf3ffd86e000604b345","5eb87cf5ffd86e000604b346","5eb87cf6ffd86e000604b347","5eb87cf8ffd86e000604b348","5eb87cf9ffd86e000604b349","5eb87cfaffd86e000604b34a","5eb87d00ffd86e000604b34f","5eb87d01ffd86e000604b350","5eb87d04ffd86e000604b353","5eb87d13ffd86e000604b360","5eb87d2dffd86e000604b376","5eb87d30ffd86e000604b378","5eb87d3dffd86e000604b381","5eb87d46ffd86e000604b388","5eb87d4dffd86e000604b38e","5fb95b3f3a88ae63c954603c","5eb87d4bffd86e000604b38c","5f8399fb818d8b59f5740d43","5fd386aa7faea57d297c86c1","600f9a718f798e2a4d5f979d","600f9a8d8f798e2a4d5f979e"],"name":"GO
+        Searcher","active":true,"id":"5ea6ed2f080df4000697c90c"},{"legacy_id":"HAWK","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":9103295,"mmsi":366943250,"abs":1033239,"class":9523438,"mass_kg":508023,"mass_lbs":1120000,"year_built":1995,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:430027/mmsi:366943250/imo:9103295/vessel:HAWK","image":"https://i.imgur.com/hGWWupT.jpg","launches":["5eb87d0cffd86e000604b35a","5eb87d0dffd86e000604b35b","5eb87d13ffd86e000604b360","5eb87d18ffd86e000604b365","5eb87d1effd86e000604b36a","5eb87d20ffd86e000604b36c","5eb87d22ffd86e000604b36d","5eb87d24ffd86e000604b36f","5eb87d39ffd86e000604b37d","5eb87d39ffd86e000604b37e","5eb87d3bffd86e000604b37f","5eb87d3cffd86e000604b380","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d43ffd86e000604b385","5eb87d46ffd86e000604b388","5fb95b3f3a88ae63c954603c","5eb87d4effd86e000604b391","5eb87d4fffd86e000604b393","5fbfecce54ceb10a5664c80a","5fbfecfe54ceb10a5664c80b","600f9a8d8f798e2a4d5f979e"],"name":"HAWK","active":false,"id":"5ea6ed2f080df4000697c90d"},{"legacy_id":"HOLLYWOOD","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":8428674,"mmsi":366955620,"abs":null,"class":null,"mass_kg":320236,"mass_lbs":706000,"year_built":1985,"home_port":"Fort
+        Lauderdale","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:430344/mmsi:367648150/imo:8428674/vessel:CAITLIN","image":"https://photos.marinetraffic.com/ais/showphoto.aspx?photoid=3406596","launches":["5eb87d2dffd86e000604b376","5eb87d2effd86e000604b377","5eb87d30ffd86e000604b378","5eb87d35ffd86e000604b37a"],"name":"Hollywood","active":true,"id":"5ea6ed2f080df4000697c90e"},{"legacy_id":"JRTI-1","model":"Marmac
+        300","type":"Barge","roles":["ASDS barge"],"imo":null,"mmsi":null,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":2014,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":null,"image":"https://i.imgur.com/RJPmP8G.jpg","launches":["5eb87ce8ffd86e000604b33c","5eb87cecffd86e000604b33f"],"name":"Just
+        Read The Instructions 1","active":false,"id":"5ea6ed2f080df4000697c90f"},{"legacy_id":"JRTI-2","model":"Marmac
+        303","type":"Barge","roles":["ASDS barge"],"imo":null,"mmsi":null,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":2015,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":null,"image":"https://i.imgur.com/7VMC0Gn.jpg","launches":["5eb87cf0ffd86e000604b343","5eb87cfdffd86e000604b34c","5eb87d05ffd86e000604b354","5eb87d08ffd86e000604b357","5eb87d0affd86e000604b359","5eb87d1fffd86e000604b36b","5eb87d25ffd86e000604b370","5eb87d28ffd86e000604b373","5ef6a2090059c33cee4a828b","5ef6a2e70059c33cee4a8293","5eb87d4dffd86e000604b38e","5eb87d4bffd86e000604b38c","5eb87d4fffd86e000604b393","5fbfecce54ceb10a5664c80a","600f9a718f798e2a4d5f979d"],"name":"Just
+        Read The Instructions 2","active":true,"id":"5ea6ed2f080df4000697c910"},{"legacy_id":"KELLYC","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":null,"mmsi":367693690,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":null,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:3718707/mmsi:367693690/imo:0/vessel:KELLY_C","image":null,"launches":["5eb87d05ffd86e000604b354"],"name":"Kelly
+        C","active":false,"id":"5ea6ed2f080df4000697c911"},{"legacy_id":"NRCQUEST","model":null,"type":"Cargo","roles":["Support
+        Ship","Dragon Recovery"],"imo":9271195,"mmsi":367486370,"abs":1134613,"class":2115909,"mass_kg":440892,"mass_lbs":972000,"year_built":2002,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:447294/mmsi:367486370/imo:9271195/vessel:NRC_QUEST","image":"https://i.imgur.com/GvtuYUN.jpg","launches":["5eb87ce8ffd86e000604b33c","5eb87cecffd86e000604b33f","5eb87cf0ffd86e000604b343","5eb87cf3ffd86e000604b345","5eb87cf9ffd86e000604b349","5eb87cfdffd86e000604b34c","5eb87cfeffd86e000604b34d","5eb87d03ffd86e000604b352","5eb87d05ffd86e000604b354","5eb87d07ffd86e000604b356","5eb87d0effd86e000604b35c","5eb87d16ffd86e000604b364","5eb87d1cffd86e000604b369","5eb87d1fffd86e000604b36b","5eb87d25ffd86e000604b370","5eb87d28ffd86e000604b373"],"name":"NRC
+        Quest","active":true,"id":"5ea6ed30080df4000697c912"},{"legacy_id":"OCISLY","model":"Marmac
+        304","type":"Barge","roles":["ASDS barge"],"imo":null,"mmsi":null,"abs":null,"class":null,"mass_kg":null,"mass_lbs":null,"year_built":2015,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":null,"image":"https://i.imgur.com/28dCx6G.jpg","launches":["5eb87cf2ffd86e000604b344","5eb87cf3ffd86e000604b345","5eb87cf6ffd86e000604b347","5eb87cf8ffd86e000604b348","5eb87cfaffd86e000604b34a","5eb87d00ffd86e000604b34f","5eb87d04ffd86e000604b353","5eb87d0cffd86e000604b35a","5eb87d0dffd86e000604b35b","5eb87d13ffd86e000604b360","5eb87d18ffd86e000604b365","5eb87d19ffd86e000604b366","5eb87d1effd86e000604b36a","5eb87d20ffd86e000604b36c","5eb87d22ffd86e000604b36d","5eb87d24ffd86e000604b36f","5eb87d2affd86e000604b374","5eb87d2bffd86e000604b375","5eb87d2dffd86e000604b376","5eb87d2effd86e000604b377","5eb87d30ffd86e000604b378","5eb87d35ffd86e000604b37a","5eb87d39ffd86e000604b37d","5eb87d3bffd86e000604b37f","5eb87d3cffd86e000604b380","5eb87d3fffd86e000604b382","5eb87d41ffd86e000604b383","5eb87d43ffd86e000604b385","5eb87d44ffd86e000604b386","5eb87d46ffd86e000604b388","5ed9819a1f30554030d45c29","5ed981d91f30554030d45c2a","5ef6a2090059c33cee4a828b","5ef6a2bf0059c33cee4a828c","5eb87d4cffd86e000604b38d","5fb95b3f3a88ae63c954603c","5eb87d4effd86e000604b391","5fd386aa7faea57d297c86c1","5ff6554f9257f579ee3a6c5f","600f9a5e8f798e2a4d5f979c","5fbfecfe54ceb10a5664c80b","600f9a8d8f798e2a4d5f979e","60428aafc041c16716f73cd7","60428ac4c041c16716f73cd8"],"name":"Of
+        Course I Still Love You","active":true,"id":"5ea6ed30080df4000697c913"},{"legacy_id":"PACIFICFREEDOM","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":null,"mmsi":367639830,"abs":570902,"class":7602544,"mass_kg":89811,"mass_lbs":198000,"year_built":1976,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:4249791/mmsi:367639830/imo:0/vessel:PACIFIC_FREEDOM","image":"https://i.imgur.com/eJWx70Z.jpg","launches":["5eb87cf0ffd86e000604b343","5eb87d1fffd86e000604b36b","5eb87d25ffd86e000604b370","5eb87d28ffd86e000604b373"],"name":"Pacific
+        Freeedom","active":true,"id":"5ea6ed30080df4000697c914"},{"legacy_id":"PACIFICWARRIOR","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":7641384,"mmsi":367008820,"abs":566282,"class":7434575,"mass_kg":351080,"mass_lbs":774000,"year_built":1974,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434121/mmsi:368144990/imo:7641384/vessel:PACIFIC_WARRIOR","image":"https://i.imgur.com/qdNDmYs.jpg","launches":["5eb87cfdffd86e000604b34c"],"name":"Pacific
+        Warrior","active":false,"id":"5ea6ed30080df4000697c915"},{"legacy_id":"RACHEL","model":null,"type":"Tug","roles":["ASDS
+        Tug"],"imo":7600378,"mmsi":367488370,"abs":576417,"class":7611785,"mass_kg":312072,"mass_lbs":688000,"year_built":1976,"home_port":"Port
+        Canaveral","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:447352/mmsi:367488370/imo:7600378/vessel:RACHEL","image":"https://i.imgur.com/IpYJWUW.jpg","launches":["5eb87d19ffd86e000604b366"],"name":"RACHEL","active":false,"id":"5ea6ed30080df4000697c916"},{"legacy_id":null,"model":null,"type":"Tug","roles":["Support
+        Ship","Barge Tug"],"imo":7390765,"mmsi":100199370,"abs":568498,"class":7515789,"mass_kg":843682,"mass_lbs":1860000,"year_built":1975,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:451328/mmsi:100199370/imo:7390765/vessel:FINN_FALGOUT","image":"https://imgur.com/WGfvh9I.png","launches":["5eb87d44ffd86e000604b386","5eb87d45ffd86e000604b387","5ed9819a1f30554030d45c29","5ed981d91f30554030d45c2a","5ef6a1e90059c33cee4a828a","5ef6a2bf0059c33cee4a828c","5eb87d4cffd86e000604b38d","5eb87d4dffd86e000604b38e","5eb87d4bffd86e000604b38c","600f9a718f798e2a4d5f979d","60428aafc041c16716f73cd7","60428ac4c041c16716f73cd8"],"name":"Finn
+        Falgout","active":true,"id":"5ee68c683c228f36bd5809b5"},{"legacy_id":null,"model":null,"type":"Tug","roles":["Support
+        Ship","Barge Tug"],"imo":8218938,"mmsi":303350200,"abs":1134122,"class":3113494,"mass_kg":741170,"mass_lbs":1634000,"year_built":2003,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:357782/mmsi:303350200/imo:8218938/vessel:LAUREN_FOSS","image":"https://imgur.com/bRAJ52J.png","launches":["5ff6554f9257f579ee3a6c5f"],"name":"Lauren
+        Foss","active":false,"id":"601742b20c87b90be7bb7e86"},{"legacy_id":null,"model":null,"type":"Cargo","roles":["Fairing
+        Recovery","Support Ship"],"imo":1259393,"mmsi":367655260,"abs":1259393,"class":15235966,"mass_kg":2097411,"mass_lbs":4623999,"year_built":2014,"home_port":"Port
+        Canaveral","status":null,"speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:2764827/mmsi:367655260/imo:9670638/vessel:SHELIA_BORDELON","image":"https://imgur.com/LU8aodR.png","launches":["60428aafc041c16716f73cd7"],"name":"Shelia
+        Bordelon","active":true,"id":"6059166413f40e27e8af34b6"}]'
+  recorded_at: Thu, 22 Apr 2021 03:02:15 GMT
+recorded_with: VCR 6.0.0

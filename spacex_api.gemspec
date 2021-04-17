@@ -33,4 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday_middleware", "~> 1.0"
 
   spec.add_development_dependency "rubocop", "1.12"
+  spec.add_development_dependency "vcr", "~> 6.0"
+  spec.add_development_dependency "webmock", "~> 3.12"
 end

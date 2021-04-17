@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.spacexdata.com/v4/payloads/query
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1412'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=de102fc256d44a7a98d6012ea6832201b1619060512; expires=Sat, 22-May-21
+        03:01:52 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"1e77-9bsxRvk1dFL3fkkl+bqqT4TBKUA"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 7ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991fed33000006dd7d0d1000000001'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=ggAk9bXXR%2BaMHt3%2FTI0WADSLnOSquErPUGLXi2dVa9K7dBkuHXpSTNaHzM1VLlc6XPvOf09zUoZGBAIaB40rgz%2BgyC1NxqtXLG9Aa4bNLW4ku%2FU%3D"}],"max_age":604800,"group":"cf-nel"}'
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c285b5e06dd-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"docs":[{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"FalconSAT-2","type":"Satellite","reused":false,"launch":"5eb87cd9ffd86e000604b32a","customers":["DARPA"],"norad_ids":[],"nationalities":["United
+        States"],"manufacturers":["SSTL"],"mass_kg":20,"mass_lbs":43,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":400,"apoapsis_km":500,"inclination_deg":39,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b5b6c3bb0006eeb1e1"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"DemoSAT","type":"Satellite","reused":false,"launch":"5eb87cdaffd86e000604b32b","customers":["DARPA"],"norad_ids":[],"nationalities":["United
+        States"],"manufacturers":["SpaceX"],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":null,"apoapsis_km":null,"inclination_deg":null,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b6b6c3bb0006eeb1e2"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"Trailblazer","type":"Satellite","reused":false,"launch":"5eb87cdbffd86e000604b32c","customers":["NASA"],"norad_ids":[],"nationalities":["United
+        States"],"manufacturers":["Space Dev"],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":null,"apoapsis_km":null,"inclination_deg":null,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b6b6c3bb0006eeb1e3"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"PRESat","type":"Satellite","reused":false,"launch":"5eb87cdbffd86e000604b32c","customers":["ORS"],"norad_ids":[],"nationalities":["United
+        States"],"manufacturers":[],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":null,"apoapsis_km":null,"inclination_deg":null,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b6b6c3bb0006eeb1e4"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"RatSat","type":"Satellite","reused":false,"launch":"5eb87cdbffd86e000604b32d","customers":["SpaceX"],"norad_ids":[33393],"nationalities":["United
+        States"],"manufacturers":["SpaceX"],"mass_kg":165,"mass_lbs":363,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":6991.838,"eccentricity":0.0013064,"periapsis_km":604.569,"apoapsis_km":622.837,"inclination_deg":9.3461,"period_min":96.972,"lifespan_years":null,"epoch":"2021-04-21T08:20:59.000Z","mean_motion":14.84963296,"raan":88.2223,"arg_of_pericenter":346.2669,"mean_anomaly":13.7175,"id":"5eb0e4b7b6c3bb0006eeb1e5"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"RazakSAT","type":"Satellite","reused":false,"launch":"5eb87cdcffd86e000604b32e","customers":["ATSB"],"norad_ids":[35578],"nationalities":["Malaysia"],"manufacturers":["Satrec"],"mass_kg":200,"mass_lbs":440,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":7048.83,"eccentricity":0.0016591,"periapsis_km":659,"apoapsis_km":682.389,"inclination_deg":8.9885,"period_min":98.16,"lifespan_years":null,"epoch":"2021-04-21T19:12:35.000Z","mean_motion":14.66990304,"raan":7.7417,"arg_of_pericenter":175.1178,"mean_anomaly":184.9174,"id":"5eb0e4b7b6c3bb0006eeb1e6"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"Dragon
+        Qualification Unit","type":"Dragon Boilerplate","reused":false,"launch":"5eb87cddffd86e000604b32f","customers":["SpaceX"],"norad_ids":[36595],"nationalities":["United
+        States"],"manufacturers":["SpaceX"],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":6634.458,"eccentricity":0.0030715,"periapsis_km":235.945,"apoapsis_km":276.701,"inclination_deg":34.5005,"period_min":89.632,"lifespan_years":null,"epoch":"2010-06-04T20:04:51.000Z","mean_motion":16.06552645,"raan":41.2862,"arg_of_pericenter":213.759,"mean_anomaly":146.1185,"id":"5eb0e4b7b6c3bb0006eeb1e7"},{"dragon":{"capsule":"5e9e2c5bf35918ed873b2664","mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":11940,"manifest":null,"water_landing":true,"land_landing":false},"name":"COTS
+        Demo Flight 1","type":"Dragon 1.0","reused":false,"launch":"5eb87cdeffd86e000604b330","customers":["NASA(COTS)"],"norad_ids":[37244],"nationalities":["United
+        States"],"manufacturers":["SpaceX"],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":6672.063,"eccentricity":0.0021812,"periapsis_km":279.375,"apoapsis_km":308.481,"inclination_deg":34.5447,"period_min":90.396,"lifespan_years":null,"epoch":"2010-12-08T15:34:03.000Z","mean_motion":15.9298967,"raan":180.7668,"arg_of_pericenter":225.2707,"mean_anomaly":136.6556,"id":"5eb0e4b9b6c3bb0006eeb1e8"},{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"Cubesats","type":"Satellite","reused":false,"launch":"5eb87cdeffd86e000604b330","customers":["NRO"],"norad_ids":[],"nationalities":[],"manufacturers":[],"mass_kg":null,"mass_lbs":null,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":null,"apoapsis_km":null,"inclination_deg":null,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b9b6c3bb0006eeb1e9"},{"dragon":{"capsule":"5e9e2c5bf3591882af3b2665","mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":806400,"manifest":null,"water_landing":true,"land_landing":false},"name":"COTS
+        Demo Flight 2","type":"Dragon 1.0","reused":false,"launch":"5eb87cdfffd86e000604b331","customers":["NASA(COTS)"],"norad_ids":[38348],"nationalities":["United
+        States"],"manufacturers":["SpaceX"],"mass_kg":525,"mass_lbs":1157,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":6711.684,"eccentricity":0.0057963,"periapsis_km":294.646,"apoapsis_km":372.452,"inclination_deg":51.6726,"period_min":91.202,"lifespan_years":null,"epoch":"2012-05-22T09:12:31.000Z","mean_motion":15.78904505,"raan":251.5418,"arg_of_pericenter":331.7079,"mean_anomaly":31.2745,"id":"5eb0e4bab6c3bb0006eeb1ea"}],"totalDocs":166,"offset":0,"limit":10,"totalPages":17,"page":1,"pagingCounter":1,"hasPrevPage":false,"hasNextPage":true,"prevPage":null,"nextPage":2}'
+  recorded_at: Thu, 22 Apr 2021 03:01:52 GMT
+recorded_with: VCR 6.0.0

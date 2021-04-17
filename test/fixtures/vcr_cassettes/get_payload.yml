@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/payloads/5eb0e4b5b6c3bb0006eeb1e1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:01:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '427'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5b20296a205e8ad8887531a6a57723521619060509; expires=Sat, 22-May-21
+        03:01:49 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"2cf-n9ytA/sSBTV9l92HD1A/dj1BkXY"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 9ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09991fe502000040b3ecab8000000001'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=Tp6IOsYL%2F4J82HT6XDfe%2BsU7UibuegS7sgjxwJQuNQdmr7QIKEvtU5nqw6siBX3EgCzXluqRH6zybthh%2FBNTfvhXy8gseKBNMxc4s2c4VYS4%2BOM%3D"}],"max_age":604800,"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c1b3c5b40b3-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"dragon":{"capsule":null,"mass_returned_kg":null,"mass_returned_lbs":null,"flight_time_sec":null,"manifest":null,"water_landing":null,"land_landing":null},"name":"FalconSAT-2","type":"Satellite","reused":false,"launch":"5eb87cd9ffd86e000604b32a","customers":["DARPA"],"norad_ids":[],"nationalities":["United
+        States"],"manufacturers":["SSTL"],"mass_kg":20,"mass_lbs":43,"orbit":"LEO","reference_system":"geocentric","regime":"low-earth","longitude":null,"semi_major_axis_km":null,"eccentricity":null,"periapsis_km":400,"apoapsis_km":500,"inclination_deg":39,"period_min":null,"lifespan_years":null,"epoch":null,"mean_motion":null,"raan":null,"arg_of_pericenter":null,"mean_anomaly":null,"id":"5eb0e4b5b6c3bb0006eeb1e1"}'
+  recorded_at: Thu, 22 Apr 2021 03:01:50 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/crew
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:02:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '845'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d55fe65f6bb99555276518a3e5255458f1619060521; expires=Sat, 22-May-21
+        03:02:01 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"e6a-GsV1MKCNudyl3Z1Pa9JcgEMpJuA"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 6ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '09992013a8000006729e009000000001'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=f3mGFk9ak38K%2FOnhfBEZJRMvplIIehfWsXPwfZgIaJFvaySEn364S4JakBmS4LCu1raOK3NZAsPQ3LD4lHwz5K5jvwg989ZlkYvmdWH8BW5QguA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"max_age":604800,"report_to":"cf-nel"}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c65dc7c0672-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"name":"Robert Behnken","agency":"NASA","image":"https://imgur.com/0smMgMH.png","wikipedia":"https://en.wikipedia.org/wiki/Robert_L._Behnken","launches":["5eb87d46ffd86e000604b388"],"status":"active","id":"5ebf1a6e23a9a60006e03a7a"},{"name":"Douglas
+        Hurley","agency":"NASA","image":"https://i.imgur.com/ooaayWf.png","wikipedia":"https://en.wikipedia.org/wiki/Douglas_G._Hurley","launches":["5eb87d46ffd86e000604b388"],"status":"active","id":"5ebf1b7323a9a60006e03a7b"},{"name":"Shannon
+        Walker","agency":"NASA","image":"https://imgur.com/9z4tRIO.png","wikipedia":"https://en.wikipedia.org/wiki/Shannon_Walker","launches":["5eb87d4dffd86e000604b38e"],"status":"active","id":"5f7f1543bf32c864a529b23e"},{"name":"Soichi
+        Noguchi","agency":"JAXA","image":"https://imgur.com/7B1jxl8.png","wikipedia":"https://en.wikipedia.org/wiki/Soichi_Noguchi","launches":["5eb87d4dffd86e000604b38e"],"status":"active","id":"5f7f158bbf32c864a529b23f"},{"name":"Victor
+        J. Glover","agency":"NASA","image":"https://imgur.com/Vv5Hgzh.png","wikipedia":"https://en.wikipedia.org/wiki/Victor_J._Glover","launches":["5eb87d4dffd86e000604b38e"],"status":"active","id":"5f7f15d5bf32c864a529b240"},{"name":"Michael
+        S. Hopkins","agency":"NASA","image":"https://imgur.com/Dfg8OJ2.png","wikipedia":"https://en.wikipedia.org/wiki/Michael_S._Hopkins","launches":["5eb87d4dffd86e000604b38e"],"status":"active","id":"5f7f1614bf32c864a529b241"},{"name":"Shane
+        Kimbrough","agency":"NASA","image":"https://imgur.com/nwxqtcT.png","wikipedia":"https://en.wikipedia.org/wiki/Shane_Kimbrough","launches":[],"status":"active","id":"5fe3ba5fb3467846b3242188"},{"name":"K.
+        Megan McArthur","agency":"NASA","image":"https://imgur.com/0VNXcdM.png","wikipedia":"https://en.wikipedia.org/wiki/K._Megan_McArthur","launches":[],"status":"active","id":"5fe3bb01b3467846b3242189"},{"name":"Thomas
+        Pesquet","agency":"ESA","image":"https://imgur.com/5iColcZ.png","wikipedia":"https://en.wikipedia.org/wiki/Thomas_Pesquet","launches":[],"status":"active","id":"5fe3bc3db3467846b324218b"},{"name":"Akihiko
+        Hoshide","agency":"JAXA","image":"https://imgur.com/GefuPYs.png","wikipedia":"https://en.wikipedia.org/wiki/Akihiko_Hoshide","launches":[],"status":"active","id":"5fe3bc8ab3467846b324218c"},{"name":"Raja
+        Chari","agency":"NASA","image":"https://imgur.com/uKj6DOF.png","wikipedia":"https://en.wikipedia.org/wiki/Raja_Chari","launches":[],"status":"active","id":"5fe3c587b3467846b3242198"},{"name":"Thomas
+        Marshburn","agency":"NASA","image":"https://imgur.com/9RmQJZw.png","wikipedia":"https://en.wikipedia.org/wiki/Thomas_Marshburn","launches":[],"status":"active","id":"5fe3c5beb3467846b3242199"},{"name":"Matthias
+        Maurer","agency":"ESA","image":"https://imgur.com/yBPw4mX.png","wikipedia":"https://en.wikipedia.org/wiki/Matthias_Maurer","launches":[],"status":"active","id":"5fe3c5f6b3467846b324219a"},{"name":"Jared
+        Isaacman","agency":"SpaceX","image":"https://imgur.com/BpdQrMv.png","wikipedia":"https://en.wikipedia.org/wiki/Jared_Isaacman","launches":[],"status":"active","id":"607a3a5f5a906a44023e0870"},{"name":"Hayley
+        Arceneaux","agency":"SpaceX","image":"https://imgur.com/ll7TlwD.png","wikipedia":"https://en.wikipedia.org/wiki/Hayley_Arceneaux","launches":[],"status":"active","id":"607a3ab45a906a44023e0872"},{"name":"Sian
+        Proctor","agency":"SpaceX","image":"https://imgur.com/gcnGDC6.png","wikipedia":"https://en.wikipedia.org/wiki/Sian_Proctor","launches":[],"status":"active","id":"607b48375a906a44023e08b8"},{"name":"Christopher
+        Sembroski","agency":"SpaceX","image":"https://imgur.com/mC9naw6.png","wikipedia":"https://fr.wikipedia.org/wiki/Christopher_Sembroski","launches":[],"status":"active","id":"607b48da5a906a44023e08b9"}]'
+  recorded_at: Thu, 22 Apr 2021 03:02:02 GMT
+recorded_with: VCR 6.0.0

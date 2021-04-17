@@ -1,0 +1,94 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.spacexdata.com/v4/ships/5ea6ed2d080df4000697c901
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:02:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '445'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d8ada2d49baea019a8fbd29792328add91619060535; expires=Sat, 22-May-21
+        03:02:15 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Etag:
+      - '"28d-pfI7tImaQrLbsuZd9t4J0mYIRhA"'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - HIT
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 1ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '099920491b0000079200b2b000000001'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=1DqCdbM0wP%2FQ9zQqNdK6iBcUyNR4nOLkH0zKEVLmy81vsHrTSRkRVk7S1zneyiEer91rLAs4lBWOwbOMWcPPsaWZDehTrLeWQ5W2jDJaAsA7qeM%3D"}],"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9cbb5f030792-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"legacy_id":"AMERICANCHAMPION","model":null,"type":"Tug","roles":["Support
+        Ship","Barge Tug"],"imo":7434016,"mmsi":367020820,"abs":571252,"class":7604342,"mass_kg":266712,"mass_lbs":588000,"year_built":1976,"home_port":"Port
+        of Los Angeles","status":"","speed_kn":null,"course_deg":null,"latitude":null,"longitude":null,"last_ais_update":null,"link":"https://www.marinetraffic.com/en/ais/details/ships/shipid:434663/mmsi:367020820/imo:7434016/vessel:AMERICAN_CHAMPION","image":"https://i.imgur.com/woCxpkj.jpg","launches":["5eb87cdeffd86e000604b330","5eb87cdfffd86e000604b331"],"name":"American
+        Champion","active":false,"id":"5ea6ed2d080df4000697c901"}'
+  recorded_at: Thu, 22 Apr 2021 03:02:15 GMT
+recorded_with: VCR 6.0.0

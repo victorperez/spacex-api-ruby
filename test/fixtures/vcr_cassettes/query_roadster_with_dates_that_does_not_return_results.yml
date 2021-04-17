@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.spacexdata.com/v4/roadster/query
+    body:
+      encoding: UTF-8
+      string: '{"query":{"query":{"date_utc":{"$gte":"2010-06-22T00:00:00.000Z","$lte":"2010-06-25T00:00:00.000Z"}}},"options":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.4.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Thu, 22 Apr 2021 03:02:03 GMT
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3f4e4feb1b37945f99b61f1212ce86141619060523; expires=Sat, 22-May-21
+        03:02:03 GMT; path=/; domain=.spacexdata.com; HttpOnly; SameSite=Lax; Secure
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - spacex-api-cache,spacex-api-response-time
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Expect-Ct:
+      - max-age=0
+      Referrer-Policy:
+      - no-referrer
+      Spacex-Api-Cache:
+      - MISS
+      Spacex-Api-Cache-Online:
+      - 'true'
+      Spacex-Api-Response-Time:
+      - 4ms
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '0999201b3e0000e664923dd000000001'
+      Report-To:
+      - '{"max_age":604800,"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=%2BPAmjki%2Fk3tq5lv4SY%2FuvZyGIIcMfxvLNXxdp2H0FasX7SbT1K49DMpKX%2BhXwRIJwN5191s8gU2nAPy5zy1o7RP64bFOjphCl16xtQhsr%2FpiaAY%3D"}],"group":"cf-nel"}'
+      Nel:
+      - '{"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 643b9c71fa58e664-LHR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 22 Apr 2021 03:02:04 GMT
+recorded_with: VCR 6.0.0
