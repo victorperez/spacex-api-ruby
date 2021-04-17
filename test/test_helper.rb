@@ -2,6 +2,9 @@
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 
+require "simplecov"
+SimpleCov.start
+
 require "spacex_api"
 
 require "minitest/autorun"
