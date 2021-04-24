@@ -11,9 +11,9 @@ class StarlinkTest < Minitest::Test
       response = SpacexApi.client.starlinks
 
       assert_instance_of Array, response
-      assert_equal "5eed770f096e59000698560d", response.first[:id]
+      assert_equal "5eed770f096e59000698560d", response.first.id
       STARLINK_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -22,10 +22,10 @@ class StarlinkTest < Minitest::Test
     VCR.use_cassette("get_starlink") do
       response = SpacexApi.client.get_starlink("5eed770f096e59000698560d")
 
-      assert_instance_of Hash, response
-      assert_equal "5eed770f096e59000698560d", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eed770f096e59000698560d", response.id
       STARLINK_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -34,10 +34,10 @@ class StarlinkTest < Minitest::Test
     VCR.use_cassette("query_starlinks_with_empty_body") do
       response = SpacexApi.client.query_starlinks({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5eed770f096e59000698560d", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eed770f096e59000698560d", response.docs.first.id
       STARLINK_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -55,8 +55,8 @@ class StarlinkTest < Minitest::Test
 
       response = SpacexApi.client.query_starlinks({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

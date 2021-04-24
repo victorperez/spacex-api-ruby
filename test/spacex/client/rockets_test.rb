@@ -13,9 +13,9 @@ class RocketsTest < Minitest::Test
       response = SpacexApi.client.rockets
 
       assert_instance_of Array, response
-      assert_equal "5e9d0d95eda69955f709d1eb", response.first[:id]
+      assert_equal "5e9d0d95eda69955f709d1eb", response.first.id
       ROCKET_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -24,10 +24,10 @@ class RocketsTest < Minitest::Test
     VCR.use_cassette("get_rocket") do
       response = SpacexApi.client.get_rocket("5e9d0d95eda69955f709d1eb")
 
-      assert_instance_of Hash, response
-      assert_equal "5e9d0d95eda69955f709d1eb", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9d0d95eda69955f709d1eb", response.id
       ROCKET_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -36,10 +36,10 @@ class RocketsTest < Minitest::Test
     VCR.use_cassette("query_rockets_with_empty_body") do
       response = SpacexApi.client.query_rockets({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5e9d0d95eda69955f709d1eb", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9d0d95eda69955f709d1eb", response.docs.first.id
       ROCKET_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -57,8 +57,8 @@ class RocketsTest < Minitest::Test
 
       response = SpacexApi.client.query_rockets({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

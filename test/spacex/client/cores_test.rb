@@ -11,9 +11,9 @@ class CoresTest < Minitest::Test
       response = SpacexApi.client.cores
 
       assert_instance_of Array, response
-      assert_equal "5e9e289df35918033d3b2623", response.first[:id]
+      assert_equal "5e9e289df35918033d3b2623", response.first.id
       CORE_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -22,10 +22,10 @@ class CoresTest < Minitest::Test
     VCR.use_cassette("get_core") do
       response = SpacexApi.client.get_core("5e9e289df35918033d3b2623")
 
-      assert_instance_of Hash, response
-      assert_equal "5e9e289df35918033d3b2623", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9e289df35918033d3b2623", response.id
       CORE_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -34,10 +34,10 @@ class CoresTest < Minitest::Test
     VCR.use_cassette("query_cores_with_empty_body") do
       response = SpacexApi.client.query_cores({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5e9e289df35918033d3b2623", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9e289df35918033d3b2623", response.docs.first.id
       CORE_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -55,8 +55,8 @@ class CoresTest < Minitest::Test
 
       response = SpacexApi.client.query_cores({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

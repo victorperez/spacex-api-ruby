@@ -11,9 +11,9 @@ class CompanyInfoTest < Minitest::Test
     VCR.use_cassette("company_info") do
       response = SpacexApi.client.company_info
 
-      assert_instance_of Hash, response
+      assert_instance_of OpenStruct, response
       COMPANY_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end

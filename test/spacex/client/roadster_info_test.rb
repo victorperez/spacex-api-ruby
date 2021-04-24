@@ -14,9 +14,9 @@ class RoadsterInfoTest < Minitest::Test
     VCR.use_cassette("roadster") do
       response = SpacexApi.client.roadster
 
-      assert_instance_of Hash, response
+      assert_instance_of OpenStruct, response
       ROADSTER_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -25,9 +25,9 @@ class RoadsterInfoTest < Minitest::Test
     VCR.use_cassette("query_roadster_with_empty_body") do
       response = SpacexApi.client.query_roadster({}.to_json)
 
-      assert_instance_of Hash, response
+      assert_instance_of OpenStruct, response
       ROADSTER_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end

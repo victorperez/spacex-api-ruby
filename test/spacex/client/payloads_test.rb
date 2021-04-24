@@ -14,9 +14,9 @@ class PayloadsTest < Minitest::Test
       response = SpacexApi.client.payloads
 
       assert_instance_of Array, response
-      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response.first[:id]
+      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response.first.id
       PAYLOAD_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -25,10 +25,10 @@ class PayloadsTest < Minitest::Test
     VCR.use_cassette("get_payload") do
       response = SpacexApi.client.get_payload("5eb0e4b5b6c3bb0006eeb1e1")
 
-      assert_instance_of Hash, response
-      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response.id
       PAYLOAD_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -37,10 +37,10 @@ class PayloadsTest < Minitest::Test
     VCR.use_cassette("query_payloads_with_empty_body") do
       response = SpacexApi.client.query_payloads({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eb0e4b5b6c3bb0006eeb1e1", response.docs.first.id
       PAYLOAD_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -58,8 +58,8 @@ class PayloadsTest < Minitest::Test
 
       response = SpacexApi.client.query_payloads({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

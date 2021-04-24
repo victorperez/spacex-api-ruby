@@ -10,9 +10,9 @@ class HistoryTest < Minitest::Test
       response = SpacexApi.client.historical_events
 
       assert_instance_of Array, response
-      assert_equal "5f6fb2cfdcfdf403df37971e", response.first[:id]
+      assert_equal "5f6fb2cfdcfdf403df37971e", response.first.id
       HISTORY_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -21,10 +21,10 @@ class HistoryTest < Minitest::Test
     VCR.use_cassette("get_history") do
       response = SpacexApi.client.get_historical_event("5f6fb2cfdcfdf403df37971e")
 
-      assert_instance_of Hash, response
-      assert_equal "5f6fb2cfdcfdf403df37971e", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5f6fb2cfdcfdf403df37971e", response.id
       HISTORY_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -33,10 +33,10 @@ class HistoryTest < Minitest::Test
     VCR.use_cassette("query_history_with_empty_body") do
       response = SpacexApi.client.query_historical_events({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5f6fb2cfdcfdf403df37971e", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5f6fb2cfdcfdf403df37971e", response.docs.first.id
       HISTORY_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -54,8 +54,8 @@ class HistoryTest < Minitest::Test
 
       response = SpacexApi.client.query_historical_events({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

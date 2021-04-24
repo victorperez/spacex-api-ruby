@@ -12,9 +12,9 @@ class LandpadsTest < Minitest::Test
       response = SpacexApi.client.landpads
 
       assert_instance_of Array, response
-      assert_equal "5e9e3032383ecb267a34e7c7", response.first[:id]
+      assert_equal "5e9e3032383ecb267a34e7c7", response.first.id
       LANDPAD_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -23,10 +23,10 @@ class LandpadsTest < Minitest::Test
     VCR.use_cassette("get_landpad") do
       response = SpacexApi.client.get_landpad("5e9e3032383ecb267a34e7c7")
 
-      assert_instance_of Hash, response
-      assert_equal "5e9e3032383ecb267a34e7c7", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9e3032383ecb267a34e7c7", response.id
       LANDPAD_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -35,10 +35,10 @@ class LandpadsTest < Minitest::Test
     VCR.use_cassette("query_landpads_with_empty_body") do
       response = SpacexApi.client.query_landpads({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5e9e3032383ecb267a34e7c7", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9e3032383ecb267a34e7c7", response.docs.first.id
       LANDPAD_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -56,8 +56,8 @@ class LandpadsTest < Minitest::Test
 
       response = SpacexApi.client.query_landpads({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

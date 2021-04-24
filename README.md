@@ -32,9 +32,11 @@ Detailed info for serialized dragon capsules
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.capsules.first[:id]
+capsule = SpacexApi.client.capsules.first
+capsule.id
   => "5e9e2c5bf35918ed873b2664"
+capsule.last_update
+  => "Hanging in atrium at SpaceX HQ in Hawthorne"
 ```
 
 ### Company Info
@@ -44,9 +46,11 @@ Detailed info about SpaceX as a company
 * Get company info: `SpacexApi.client.company_info`
 
 ```ruby
-client = SpacexApi.client
-client.company_info[:headquarters]
-  => {:address=>"Rocket Road", :city=>"Hawthorne", :state=>"California"}
+company_info = SpacexApi.client.company_info
+company_info.employees
+  => 9500
+company_info.headquarters.address
+  => "Rocket Road"
 ```
 
 ### Cores
@@ -59,9 +63,11 @@ Detailed info for serialized first stage cores
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.cores.first[:id]
+core = SpacexApi.client.cores.first
+core.id
   => "5e9e289df35918033d3b2623"
+core.status
+  => "lost"
 ```
 
 ### Crew
@@ -74,9 +80,11 @@ Detailed info on dragon crew members
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.crews.first[:id]
+crew = SpacexApi.client.crews.first
+crew.id
   => "5ebf1a6e23a9a60006e03a7a"
+crew.agency
+  => "NASA"
 ```
 
 ### Dragons
@@ -89,9 +97,11 @@ Detailed info on dragon crew members
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.dragons.first[:id]
+dragon = SpacexApi.client.dragons.first
+dragon.id
   => "5e9d058759b1ff74a7ad5f8f"
+dragon.heat_shield.material
+  => "PICA-X"
 ```
 
 ### Historical events
@@ -104,9 +114,11 @@ Detailed info on SpaceX historical events
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.historical_events.first[:id]
+historical_event = SpacexApi.client.historical_events.first
+historical_event.id
   => "5f6fb2cfdcfdf403df37971e"
+historical_event.event_date_utc
+  => "2008-09-28T23:15:00Z"
 ```
 
 ### Landpads
@@ -119,9 +131,11 @@ Detailed info about landing pads and ships
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.landpads.first[:id]
+landpad = SpacexApi.client.landpads.first
+landpad.id
   => "5e9e3032383ecb267a34e7c7"
+landpad.full_name
+  => "Landing Zone 1"
 ```
 
 ### Launches
@@ -138,9 +152,11 @@ Detailed info about launches
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.launches.first[:id]
+launch = SpacexApi.client.launches.first
+launch.id
   => "5eb87cd9ffd86e000604b32a"
+launch.name
+  => "FalconSat"
 ```
 
 ### Launchpads
@@ -153,9 +169,11 @@ Detailed info about launchpads
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.launchpads.first[:id]
+launchpad = SpacexApi.client.launchpads.first
+launchpad.id
   => "5e9e4501f5090910d4566f83"
+launchpad.name
+  => "VAFB SLC 3W"
 ```
 
 ### Payloads
@@ -168,9 +186,11 @@ Detailed info about launch payloads
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.payloads.first[:id]
+payload = SpacexApi.client.payloads.first
+payload.id
   => "5eb0e4b5b6c3bb0006eeb1e1"
+payload.nationalities
+  => ["United States"]
 ```
 
 ### Roadster info
@@ -182,9 +202,11 @@ Detailed info about Elon's Tesla roadster's current position
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.roadster[:id]
+roadster = SpacexApi.client.roadster
+roadster.id
   => "5eb75f0842fea42237d7f3f4"
+roadster.launch_mass_kg
+  => 1350
 ```
 
 ### Rockets
@@ -197,9 +219,11 @@ Detailed info about rocket versions
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.rockets.first[:id]
+rocket = SpacexApi.client.rockets.first
+rocket.id
   => "5e9d0d95eda69955f709d1eb"
+rocket.company
+  => "SpaceX"
 ```
 
 ### Ships
@@ -212,9 +236,11 @@ Detailed info about ships in the SpaceX fleet
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.ships.first[:id]
+ship = SpacexApi.client.ships.first
+ship.id
   => "5ea6ed2d080df4000697c901"
+ship.type
+  => "Tug"
 ```
 
 ### Starlink
@@ -227,9 +253,11 @@ Detailed info about Starlink satellites and orbits. Includes raw orbit data from
   * See [query](https://github.com/r-spacex/SpaceX-API/blob/master/docs/v4/queries.md) guide for more details on building queries and paginating
 
 ```ruby
-client = SpacexApi.client
-client.starlinks.first[:id]
+starlink = SpacexApi.client.starlinks.first
+starlink.id
   => "5eed770f096e59000698560d"
+starlink.version
+  => "v0.9"
 ```
 
 ## Development

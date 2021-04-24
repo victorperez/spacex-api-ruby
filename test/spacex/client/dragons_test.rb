@@ -14,9 +14,9 @@ class DragonsTest < Minitest::Test
       response = SpacexApi.client.dragons
 
       assert_instance_of Array, response
-      assert_equal "5e9d058759b1ff74a7ad5f8f", response.first[:id]
+      assert_equal "5e9d058759b1ff74a7ad5f8f", response.first.id
       DRAGON_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -25,10 +25,10 @@ class DragonsTest < Minitest::Test
     VCR.use_cassette("get_dragon") do
       response = SpacexApi.client.get_dragon("5e9d058759b1ff74a7ad5f8f")
 
-      assert_instance_of Hash, response
-      assert_equal "5e9d058759b1ff74a7ad5f8f", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9d058759b1ff74a7ad5f8f", response.id
       DRAGON_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -37,10 +37,10 @@ class DragonsTest < Minitest::Test
     VCR.use_cassette("query_dragons_with_empty_body") do
       response = SpacexApi.client.query_dragons({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5e9d058759b1ff74a7ad5f8f", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5e9d058759b1ff74a7ad5f8f", response.docs.first.id
       DRAGON_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -58,8 +58,8 @@ class DragonsTest < Minitest::Test
 
       response = SpacexApi.client.query_dragons({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

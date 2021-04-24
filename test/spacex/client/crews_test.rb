@@ -10,9 +10,9 @@ class CrewsTest < Minitest::Test
       response = SpacexApi.client.crews
 
       assert_instance_of Array, response
-      assert_equal "5ebf1a6e23a9a60006e03a7a", response.first[:id]
+      assert_equal "5ebf1a6e23a9a60006e03a7a", response.first.id
       CORE_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -21,10 +21,10 @@ class CrewsTest < Minitest::Test
     VCR.use_cassette("get_crew") do
       response = SpacexApi.client.get_crew("5ebf1a6e23a9a60006e03a7a")
 
-      assert_instance_of Hash, response
-      assert_equal "5ebf1a6e23a9a60006e03a7a", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5ebf1a6e23a9a60006e03a7a", response.id
       CORE_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -33,10 +33,10 @@ class CrewsTest < Minitest::Test
     VCR.use_cassette("query_crews_with_empty_body") do
       response = SpacexApi.client.query_crews({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5ebf1a6e23a9a60006e03a7a", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5ebf1a6e23a9a60006e03a7a", response.docs.first.id
       CORE_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -54,8 +54,8 @@ class CrewsTest < Minitest::Test
 
       response = SpacexApi.client.query_crews({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end

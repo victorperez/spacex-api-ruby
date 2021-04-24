@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "ostruct"
+
 module SpacexApi
   class Request
     class << self
@@ -25,7 +27,7 @@ module SpacexApi
           connection.adapter Faraday.default_adapter
 
           connection.response :logger if SpacexApi.configuration.logger
-          connection.response :json, content_type: /\bjson$/, parser_options: { symbolize_names: true }
+          connection.response :json, content_type: /\bjson$/, parser_options: { object_class: OpenStruct }
 
           connection.use Faraday::Response::RaiseError
         end

@@ -15,7 +15,7 @@ class LaunchesTest < Minitest::Test
 
       assert_instance_of Array, response
       LAUNCH_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -26,7 +26,7 @@ class LaunchesTest < Minitest::Test
 
       assert_instance_of Array, response
       LAUNCH_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -35,9 +35,9 @@ class LaunchesTest < Minitest::Test
     VCR.use_cassette("latest_launch") do
       response = SpacexApi.client.latest_launch
 
-      assert_instance_of Hash, response
+      assert_instance_of OpenStruct, response
       LAUNCH_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -46,9 +46,9 @@ class LaunchesTest < Minitest::Test
     VCR.use_cassette("next_launch") do
       response = SpacexApi.client.next_launch
 
-      assert_instance_of Hash, response
+      assert_instance_of OpenStruct, response
       LAUNCH_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -58,9 +58,9 @@ class LaunchesTest < Minitest::Test
       response = SpacexApi.client.launches
 
       assert_instance_of Array, response
-      assert_equal "5eb87cd9ffd86e000604b32a", response.first[:id]
+      assert_equal "5eb87cd9ffd86e000604b32a", response.first.id
       LAUNCH_SCHEMA.each do |key|
-        assert response.first.key?(key)
+        assert response.first.to_h.key?(key)
       end
     end
   end
@@ -69,10 +69,10 @@ class LaunchesTest < Minitest::Test
     VCR.use_cassette("get_launch") do
       response = SpacexApi.client.get_launch("5eb87cd9ffd86e000604b32a")
 
-      assert_instance_of Hash, response
-      assert_equal "5eb87cd9ffd86e000604b32a", response[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eb87cd9ffd86e000604b32a", response.id
       LAUNCH_SCHEMA.each do |key|
-        assert response.key?(key)
+        assert response.to_h.key?(key)
       end
     end
   end
@@ -81,10 +81,10 @@ class LaunchesTest < Minitest::Test
     VCR.use_cassette("query_launches_with_empty_body") do
       response = SpacexApi.client.query_launches({}.to_json)
 
-      assert_instance_of Hash, response
-      assert_equal "5eb87cd9ffd86e000604b32a", response[:docs].first[:id]
+      assert_instance_of OpenStruct, response
+      assert_equal "5eb87cd9ffd86e000604b32a", response.docs.first.id
       LAUNCH_SCHEMA.each do |key|
-        assert response[:docs].first.key?(key)
+        assert response.docs.first.to_h.key?(key)
       end
     end
   end
@@ -102,8 +102,8 @@ class LaunchesTest < Minitest::Test
 
       response = SpacexApi.client.query_launches({ query: query, options: {} }.to_json)
 
-      assert_instance_of Hash, response
-      assert_empty response[:docs]
+      assert_instance_of OpenStruct, response
+      assert_empty response.docs
     end
   end
 end
