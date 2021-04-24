@@ -1,5 +1,8 @@
 # Spacex API
 
+[![Gem Version](https://badge.fury.io/rb/spacex_api.svg)](https://badge.fury.io/rb/spacex_api)
+![Github Actions](https://github.com/victorperez/spacex-api-ruby/actions/workflows/verify.yml/badge.svg)
+
 Ruby API wrapper to consume the [SpaceX API](https://github.com/r-spacex/SpaceX-API).
 
 The gem currently support the latest SpaceX API version (V4).
